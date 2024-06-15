@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  app:
+    container_name: dederai-v4
+    build:
+      context: .
+    volumes:
+      - ./:/usr/app
+      - /usr/app/node_modules
+    environment:
+      NODE_ENV: development
+    command: npm start
+
